@@ -1,0 +1,25 @@
+{
+  "name": "sorting",
+  "version": "1.0.0",
+  "description": "a package that contains a bunch of sorts in javascript",
+  "type": "module",
+  "main": "sort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricky-Clark/Sorting.git"
+  },
+  "keywords": [
+    "sorting",
+    "npm",
+    "javascript"
+  ],
+  "author": "Ricky Clark III",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ricky-Clark/Sorting/issues"
+  },
+  "homepage": "https://github.com/Ricky-Clark/Sorting#readme"
+}
