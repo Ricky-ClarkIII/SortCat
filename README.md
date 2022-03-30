@@ -1,2 +1,2 @@
 # Sorting
-An assortment of sorts in JavaScript!
+SortCat package for sorting arrays of numbers!
