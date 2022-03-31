@@ -6,6 +6,7 @@
 import radixSort from "./sorts/radix.js";
 import mergeSort from "./sorts/merge.js";
 import quickSort from "./sorts/quick.js";
+import stalinSort from "./sorts/stalin.js";
 
 /**
  * SortCat class that has all your sorting
@@ -65,7 +66,7 @@ class SortCat {
 
     /**
      * Sorts the array using the mergesort
-     * method of sorting! SortCat patented.
+     * method of sorting! SortCat approved.
      */
     merge = async () => {
         console.log("SortCat is sorting your array using Merge Sort!");
@@ -73,9 +74,20 @@ class SortCat {
         console.log("SortCat has finished sorting your array!");
     }
 
+    /**
+     * Sorts the array using the quicksort
+     * method sorting! SortCat approved.
+     */
     quick = async () => {
         console.log("SortCat is sorting your array using Quick Sort!");
         this.sortedArray = await quickSort(this.array, 0, this.array.length - 1);
+        await this.prrrintSortedArray();
+        console.log("SortCat has finished sorting your array!");
+    }
+
+    stalin = async () => {
+        console.log("SortCat is sorting your array using Stalin Sort!");
+        this.sortedArray = await stalinSort(this.array);
         await this.prrrintSortedArray();
         console.log("SortCat has finished sorting your array!");
     }
