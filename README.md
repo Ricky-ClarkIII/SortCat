@@ -1,4 +1,4 @@
-# Sorting
+# SortCat Sorting
 SortCat package for sorting arrays of numbers!
 
 # Testing
