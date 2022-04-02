@@ -1,28 +1,9 @@
 /**
  * @file Source code for Stalin Sort
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
-
-/**
- * Finds the minimum value in the array
- * 
- * @name getMin
- * @async
- * @param {Array<Number>} array the array to find the minimum value in 
- * @returns {Number} the minimum value in the array
- */
-const getMin = async (array) => {
-    let min = array[0];
-
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] < min) {
-            min = array[i];
-        }
-    }
-
-    return min;
-}
+import { getMin } from './lib/helpers';
 
 /**
  * Sorts the array using Stalin Sort. 

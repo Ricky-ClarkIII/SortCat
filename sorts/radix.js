@@ -1,30 +1,9 @@
 /**
  * @file Source code for Radix Sort
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
-
-/**
- * Finds the maximum value in the array
- * 
- * @function
- * @name getMax
- * @async
- * @param {Array<Number>} array the array to find the maximum value in 
- * @return {Number} the maximum value in the array
- */
-const getMax = async (array) => {
-    let max = array[0];
-
-    for (let i = 1; i <= array.length; i++) {
-
-        if (array[i] > max) {
-            max = array[i];
-        }
-    }
-
-    return max;
-}
+import { getMax } from "./lib/helpers";
 
 /**
  * Sorts an array by counting the number

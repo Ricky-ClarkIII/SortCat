@@ -1,7 +1,7 @@
 /**
  * @file Source code for SortCat
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
 import radixSort from "./sorts/radix.js";
 import mergeSort from "./sorts/merge.js";

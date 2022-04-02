@@ -1,50 +1,9 @@
 /**
  * @file Source code for Count Sort
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
-
-/**
- * Finds the maximum value in the array.
- * 
- * @function
- * @name getMax
- * @async
- * @param {Array<Number>} array the array to find the max in 
- * @returns {Number} the maximum value in the array
- */
-const getMax = async (array) => {
-    let max = array[0];
-
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] > max) {
-            max = array[i];
-        }
-    }
-    
-    return max;
-}
-
-/**
- * Finds the minimum value in the array
- * 
- * @function
- * @name getMin
- * @async
- * @param {Array<Number>} array the array to find the min in 
- * @returns {Number} the minimum value in the array
- */
-const getMin = async (array) => {
-    let min = array[0];
-
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] < min) {
-            min = array[i];
-        }
-    }
-
-    return min;
-}
+import { getMin, getMax } from "./lib/helpers";
 
 /**
  * Counts the number of times each value appears in the array.

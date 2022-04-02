@@ -1,25 +1,9 @@
 /**
  * @file Source code for Quick Sort
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
-
-/**
- * Swaps the left index with
- * right index.
- * 
- * @name swap
- * @async
- * @param {Array<Number>} array the arra 
- * @param {Number} leftIndex the index of the first item 
- * @param {Number} rightIndex  the index of the second item
- */
-const swap = async (array, leftIndex, rightIndex) => {
-    let swapItem = array[leftIndex];
-
-    array[leftIndex] = array[rightIndex];
-    array[rightIndex] = swapItem;
-}
+import { swap } from "./lib/helpers";
 
 /**
  * Creates a partition of the array that is

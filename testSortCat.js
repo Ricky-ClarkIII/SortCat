@@ -1,7 +1,7 @@
 /**
  * @file Test file for SortCat
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
 import SortCat from "./sortCat.js";
 

@@ -1,26 +1,10 @@
 /**
  * @file Source code for Bubble Sort
  * @author Ricky Clark III
- * @version 1.0.0
+ * @version 1.0.1
  */
+import { swap } from "./lib/helpers";
 
-/**
- * Swaps the left index with the
- * right index in the array
- * 
- * @function
- * @name swap
- * @async
- * @param {Array<Number>} array the array with elements to swap
- * @param {Number} leftIndex the left index in the array the to swap 
- * @param {Number} rightIndex the right index in the array of the to swap
- */
-const swap = async (array, leftIndex, rightIndex) => {
-    let swapItem = array[leftIndex];
-
-    array[leftIndex] = array[rightIndex];
-    array[rightIndex] = swapItem;
-}
 
 /**
  * 
