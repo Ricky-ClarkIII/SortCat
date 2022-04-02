@@ -1,7 +1,7 @@
 /**
  * @file Source code for Quick Sort
  * @author Ricky Clark III
- * @version 1.0.2
+ * @version 1.0.3
  * 
  * Time Complexities
  * Best Case: O(n log n)

@@ -1,7 +1,7 @@
 /**
  * @file Source code for SortCat
  * @author Ricky Clark III
- * @version 1.0.2
+ * @version 1.0.3
  */
 import radixSort from "./sorts/radix.js";
 import mergeSort from "./sorts/merge.js";
@@ -17,7 +17,7 @@ import bucketSort from "./sorts/bucket.js";
  * needs! If you need a radix sort, he's there 
  * for you! If you wanna mergesort, he's more than 
  * happy to abide; however, if you want to pet SortCat
- * he will simply will not comply.
+ * he will simply not comply.
  * @class
  */
 class SortCat {
@@ -39,8 +39,12 @@ class SortCat {
      * @async
      */
     prrrintArray = async () => {
-        for (let i = 0; i < this.array.length; i++) {
-            console.log(this.array[i]);
+        if (!this.hasBeenPet) {
+            for (let i = 0; i < this.array.length; i++) {
+                console.log(this.array[i]);
+            }
+        } else {
+            console.log("SortCat has been pet and is not happy to print an array.");
         }
     }
 
@@ -55,15 +59,19 @@ class SortCat {
      * @param {Boolean} options.time if true, will print the time it took to sort
      */
     radix = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        await radixSort(this.array);
-    
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            await radixSort(this.array);
+        
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. He will not comply.");
         }
     }
 
@@ -77,15 +85,19 @@ class SortCat {
      * @param {Boolean} options.time if true, will print the time it took to sort
      */
     merge = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        this.array = await mergeSort(this.array);
+            this.array = await mergeSort(this.array);
 
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. He will not merge sort your array...");
         }
     }
 
@@ -99,15 +111,20 @@ class SortCat {
      * @param {Boolean} options.time if true, will print the time it took to sort
      */
     quick = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
 
-        await quickSort(this.array, 0, this.array.length - 1);
-    
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            if (options.time) {
+                await this.#setTimer(true);
+            }
+
+            await quickSort(this.array, 0, this.array.length - 1);
+        
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. Think again before asking him to quickly.");
         }
     }
 
@@ -121,15 +138,19 @@ class SortCat {
      * @param {Boolean} options.time if true, will print the time it took to sort
      */
     stalin = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        this.array = await stalinSort(this.array);
-    
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            this.array = await stalinSort(this.array);
+        
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. Not even stalin can sort the array for you now...");
         }
     }
 
@@ -143,15 +164,19 @@ class SortCat {
      * @param {Boolean} options.time if true, will print the time it took to sort
      */
     insertion = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        await insertionSort(this.array);
-        
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            await insertionSort(this.array);
+            
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. He will not sort your array with insertion sort.");
         }
     }
 
@@ -165,15 +190,19 @@ class SortCat {
      * @param {Boolean} options.time if true, the time it took to sort will be printed
      */
     bubble = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        await bubbleSort(this.array);
-        
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            await bubbleSort(this.array);
+            
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. He will not sort your array with bubble sort.");
         }
     }
 
@@ -187,15 +216,19 @@ class SortCat {
      * @param {Boolean} options.time if true, the time it took to sort will be printed
      */
     count = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        await countSort(this.array);
-    
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            await countSort(this.array);
+        
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. He will not count the number of occurences to sort...");
         }
     }
 
@@ -209,15 +242,19 @@ class SortCat {
      * @param {Boolean} options.time if true, the time it took to sort will be printed
      */
     bucket = async ({...options}) => {
-        if (options.time) {
-            await this.setTimer(true);
-        }
+        if (!this.hasBeenPet) {
+            if (options.time) {
+                await this.#setTimer(true);
+            }
 
-        await bucketSort(this.array);
-    
-        if (options.time) {
-            await this.setTimer(false);
-            await this.clearTimer();
+            await bucketSort(this.array);
+        
+            if (options.time) {
+                await this.#setTimer(false);
+                await this.#clearTimer();
+            }
+        } else {
+            console.log("SortCat has been pet. Create your own buckets for your safety...");
         }
     }
 
@@ -230,14 +267,12 @@ class SortCat {
     }
 
     /**
-     * @example await setTimer(true);
-     * 
      * @description A timer for checking the runtime of the 
      * sorting algorithms.
      * @async
      * @param {Boolean} start whether or not this is the start of the timer 
      */
-    setTimer = async (start) => {
+    #setTimer = async (start) => {
         if (start) {
             this.startTime = new Date().getTime();
         } else {
@@ -247,12 +282,10 @@ class SortCat {
     }
 
     /**
-     * @example await clearTimer();
-     * 
      * @description Clears the timer
      * @aysnc
      */
-    clearTimer = async () => {
+    #clearTimer = async () => {
         this.startTime = null;
         this.endTime = null;
     }

@@ -1,6 +1,6 @@
 {
   "name": "sorting",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a package that contains a bunch of sorts in javascript",
   "type": "module",
   "main": "sort.js",

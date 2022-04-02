@@ -1,7 +1,7 @@
 /**
  * @file Helper functions for sorting algorithms
  * @author Ricky Clark III
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 /**
