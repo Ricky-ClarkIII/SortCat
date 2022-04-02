@@ -10,6 +10,7 @@ import stalinSort from "./sorts/stalin.js";
 import insertionSort from "./sorts/insertion.js";
 import bubbleSort from "./sorts/bubble.js";
 import countSort from "./sorts/count.js";
+import bucketSort from "./sorts/bucket.js";
 
 /**
  * SortCat class that has all your sorting
@@ -119,6 +120,17 @@ class SortCat {
     count = async () => {
         console.log("SortCat is sorting your array using Count Sort!");
         await countSort(this.array);
+        await this.prrrintArray();
+        console.log("SortCat has finished sorting your array!");
+    }
+
+    /**
+     * Sorts the array using the bucket sort
+     * method of sorting! SortCat approved.
+     */
+    bucket = async () => {
+        console.log("SortCat is sorting your array using Bucket Sort!");
+        await bucketSort(this.array);
         await this.prrrintArray();
         console.log("SortCat has finished sorting your array!");
     }

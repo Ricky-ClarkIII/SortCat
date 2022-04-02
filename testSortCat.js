@@ -8,7 +8,7 @@ import SortCat from "./sortCat.js";
 /**
  * @const {number} NUM_ELEMENTS - Number of elements to sort
  */
-const NUM_ELEMENTS = 5000;
+const NUM_ELEMENTS = 1000;
 
 /**
  * Tests SortCat sorting
@@ -20,7 +20,7 @@ const testSortCat = async () => {
     let unsortedArray = Array.from({length: NUM_ELEMENTS}, () => Math.floor(Math.random() * NUM_ELEMENTS));
     let sortCat = new SortCat(unsortedArray);
 
-    await sortCat.count();
+    await sortCat.bucket();
     await sortCat.pet();
 }
 
