@@ -76,8 +76,6 @@ const radixSort = async (array) => {
     for (let exp = 1; Math.floor(max / exp) > 0; exp *= 10) {
         await countSort(array, exp);
     }
-
-    return array;
 }
 
 export default radixSort;

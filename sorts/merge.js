@@ -17,7 +17,7 @@
  * @async 
  * @param {Number} arrayOne the first sorted sub-array to merge
  * @param {Number} arrayTwo the second sorted sub-array to merge
- * @returns {Array<Number>} the sorted array that was merged
+ * @returns {Array<Number>} the merged array
  */
 const merge = async (arrayOne, arrayTwo) => {
     let sortedArray = [];
@@ -40,6 +40,7 @@ const merge = async (arrayOne, arrayTwo) => {
  * sorted until the entire array is completely sorted.
  * 
  * @param {Array<Number>} array the array to sort 
+ * @returns {Array<Number>} the sorted array
  */
 const mergeSort = async (array) => {
     if (array.length < 2) {
@@ -49,7 +50,7 @@ const mergeSort = async (array) => {
     let middleIndex = array.length / 2;
     let subArray = array.splice(0, middleIndex);
 
-    return merge(await mergeSort(subArray), await mergeSort(array));
+    return await merge(await mergeSort(subArray), await mergeSort(array));
 }
 
 export default mergeSort;

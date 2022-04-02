@@ -19,8 +19,6 @@ const swap = async (array, leftIndex, rightIndex) => {
 
     array[leftIndex] = array[rightIndex];
     array[rightIndex] = swapItem;
-
-    return;
 }
 
 /**
@@ -88,8 +86,6 @@ const quickSort = async (array, leftPointer, rightPointer) => {
             await quickSort(array, leftPartitionIndex, rightPointer);
         }
     }
-
-    return array;
 }
 
 export default quickSort;

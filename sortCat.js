@@ -7,6 +7,7 @@ import radixSort from "./sorts/radix.js";
 import mergeSort from "./sorts/merge.js";
 import quickSort from "./sorts/quick.js";
 import stalinSort from "./sorts/stalin.js";
+import insertionSort from "./sorts/insertion.js";
 
 /**
  * SortCat class that has all your sorting
@@ -25,7 +26,6 @@ class SortCat {
      */
     constructor(array) {
         this.array = array;
-        this.sortedArray = [];
         this.hasBeenPet = false;
     }
 
@@ -43,12 +43,6 @@ class SortCat {
         }
     }
 
-    prrrintSortedArray = async () => {
-        for (let i = 0; i < this.sortedArray.length; i++) {
-            console.info(this.sortedArray[i]);
-        }
-    }
-
     /**
      * Sorts the array using the
      * radix sort method of sorting!
@@ -56,11 +50,8 @@ class SortCat {
      */
     radix = async () => {
         console.log("SortCat is sorting your array using Radix Sort!");
-        let startTime = new Date().getTime();
-        this.sortedArray = await radixSort(this.array);
-        let endTime = new Date().getTime();
-        let timeElapsed = endTime - startTime;
-        console.log(`Time Elapsed: ${timeElapsed / 1000}`);
+        await radixSort(this.array);
+        await this.prrrintArray();
         console.log("SortCat has finished sorting your array!");
     }
 
@@ -70,30 +61,46 @@ class SortCat {
      */
     merge = async () => {
         console.log("SortCat is sorting your array using Merge Sort!");
-        this.sortedArray = await mergeSort(this.array);
+        this.array = await mergeSort(this.array);
+        await this.prrrintArray();
         console.log("SortCat has finished sorting your array!");
     }
 
     /**
      * Sorts the array using the quicksort
-     * method sorting! SortCat approved.
+     * method of sorting! SortCat approved.
      */
     quick = async () => {
         console.log("SortCat is sorting your array using Quick Sort!");
-        this.sortedArray = await quickSort(this.array, 0, this.array.length - 1);
-        await this.prrrintSortedArray();
-        console.log("SortCat has finished sorting your array!");
-    }
-
-    stalin = async () => {
-        console.log("SortCat is sorting your array using Stalin Sort!");
-        this.sortedArray = await stalinSort(this.array);
-        await this.prrrintSortedArray();
+        await quickSort(this.array, 0, this.array.length - 1);
+        await this.prrrintArray();
         console.log("SortCat has finished sorting your array!");
     }
 
     /**
-     * SortCat does not like being pet...
+     * Sorts the array using the stalin sort
+     * method of sorting! SortCat approved.
+     */
+    stalin = async () => {
+        console.log("SortCat is sorting your array using Stalin Sort!");
+        this.array = await stalinSort(this.array);
+        await this.prrrintArray();
+        console.log("SortCat has finished sorting your array!");
+    }
+
+    /**
+     * Sorts the array using the insertion sort
+     * method of sorting! SortCat approved.
+     */
+    insertion = async () => {
+        console.log("SortCat is sorting your array using Insertion Sort!");
+        await insertionSort(this.array);
+        await this.prrrintArray();
+        console.log("SortCat has finished sorting your array!");
+    }
+
+    /**
+     * Pet SortCat to see if he likes you
      */
     pet = async () => {
         this.hasBeenPet = true;
