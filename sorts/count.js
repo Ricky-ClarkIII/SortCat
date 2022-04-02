@@ -1,9 +1,9 @@
 /**
  * @file Source code for Count Sort
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
-import { getMin, getMax } from "./lib/helpers";
+import { getMin, getMax } from "./lib/helpers.js";
 
 /**
  * Counts the number of times each value appears in the array.

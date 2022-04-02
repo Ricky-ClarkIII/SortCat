@@ -1,7 +1,7 @@
 /**
  * @file Source code for mergesort
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 /**

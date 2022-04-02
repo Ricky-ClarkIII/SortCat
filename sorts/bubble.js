@@ -1,15 +1,18 @@
 /**
  * @file Source code for Bubble Sort
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
-import { swap } from "./lib/helpers";
+import { swap } from "./lib/helpers.js";
 
 
 /**
+ * @example await bubbleSort(array);
  * 
  * @function
  * @name bubbleSort
+ * @description Passes through all elements in the array checking if
+ * its neighbor is in the correct position and swaps if they are not.
  * @async
  * @param {Array<Number>} array the array to sort 
  */

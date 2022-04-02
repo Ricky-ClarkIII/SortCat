@@ -1,7 +1,7 @@
 /**
  * @file Helper functions for sorting algorithms
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 /**
@@ -65,7 +65,7 @@ const swap = async (array, i, j) => {
     array[j] = temp;
 }
 
-module.exports = {
+export {
     getMin,
     getMax,
     swap

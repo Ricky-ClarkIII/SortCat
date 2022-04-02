@@ -1,9 +1,9 @@
 /**
  * @file Source code for Stalin Sort
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
-import { getMin } from './lib/helpers';
+import { getMin } from './lib/helpers.js';
 
 /**
  * Sorts the array using Stalin Sort. 

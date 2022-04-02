@@ -1,14 +1,14 @@
 /**
  * @file Test file for SortCat
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
 import SortCat from "./sortCat.js";
 
 /**
  * @const {number} NUM_ELEMENTS - Number of elements to sort
  */
-const NUM_ELEMENTS = 1000;
+const NUM_ELEMENTS = 10000;
 
 /**
  * Tests SortCat sorting
@@ -20,8 +20,7 @@ const testSortCat = async () => {
     let unsortedArray = Array.from({length: NUM_ELEMENTS}, () => Math.floor(Math.random() * NUM_ELEMENTS));
     let sortCat = new SortCat(unsortedArray);
 
-    await sortCat.bucket();
-    await sortCat.pet();
+    await sortCat.bucket({time: true});
 }
 
 testSortCat();

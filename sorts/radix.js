@@ -1,9 +1,9 @@
 /**
  * @file Source code for Radix Sort
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
-import { getMax } from "./lib/helpers";
+import { getMax } from "./lib/helpers.js";
 
 /**
  * Sorts an array by counting the number

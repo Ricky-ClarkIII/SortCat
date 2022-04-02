@@ -1,7 +1,7 @@
 /**
  * @file Source code for SortCat
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
 import radixSort from "./sorts/radix.js";
 import mergeSort from "./sorts/merge.js";
@@ -22,9 +22,9 @@ import bucketSort from "./sorts/bucket.js";
  */
 class SortCat {
     /**
-     * Instantiates a new SortCat Class
-     * for sorting arrays with different methods.
+     * @example const sortCat = new SortCat(array);
      * 
+     * @constructor
      * @param {Array<Number>} array the array to sort 
      */
     constructor(array) {
@@ -33,106 +33,209 @@ class SortCat {
     }
 
     /**
-     * Prints an array to the console
+     * @example await SortCat.prrrintArray(); 
      * 
-     * @function
+     * @method
      * @name printArray
+     * @description Prints an array to the console
      * @async
-     * @param {Array<Number>} array the array to print 
      */
     prrrintArray = async () => {
         for (let i = 0; i < this.array.length; i++) {
-            console.info(this.array[i]);
+            console.log(this.array[i]);
         }
     }
 
     /**
-     * Sorts the array using the
+     * @example await SortCat.radix();
+     * 
+     * @method
+     * @name radix
+     * @description Sorts the array using the
      * radix sort method of sorting!
      * SortCat approved.
+     * @async
+     * @param {Object} options Options for the radix sort
+     * @param {Boolean} options.time if true, will print the time it took to sort
      */
-    radix = async () => {
-        console.log("SortCat is sorting your array using Radix Sort!");
+    radix = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         await radixSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+    
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the mergesort
+     * @example await SortCat.merge();
+     * 
+     * @method
+     * @name merge
+     * @description Sorts the array using the mergesort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options options for the merge sort
+     * @param {Boolean} options.time if true, will print the time it took to sort
      */
-    merge = async () => {
-        console.log("SortCat is sorting your array using Merge Sort!");
+    merge = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         this.array = await mergeSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the quicksort
+     * @example await SortCat.quick();
+     * 
+     * @method
+     * @name quick
+     * @description Sorts the array using the quicksort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options the options for the quick sort
+     * @param {Boolean} options.time if true, will print the time it took to sort
      */
-    quick = async () => {
-        console.log("SortCat is sorting your array using Quick Sort!");
+    quick = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         await quickSort(this.array, 0, this.array.length - 1);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+    
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the stalin sort
+     * @example await SortCat.stalin();
+     * 
+     * @method
+     * @name stalin
+     * @description Sorts the array using the stalin sort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options the options for the stalin sort
+     * @param {Boolean} options.time if true, will print the time it took to sort
      */
-    stalin = async () => {
-        console.log("SortCat is sorting your array using Stalin Sort!");
+    stalin = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         this.array = await stalinSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+    
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the insertion sort
+     * @example await SortCat.insertion();
+     * 
+     * @method
+     * @name insertion
+     * @description Sorts the array using the insertion sort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options the options for insertion sort
+     * @param {Boolean} options.time if true, will print the time it took to sort
      */
-    insertion = async () => {
-        console.log("SortCat is sorting your array using Insertion Sort!");
+    insertion = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         await insertionSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+        
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the bubble sort
+     * @example await SortCat.bubble(true);
+     * @method
+     * @name bubble
+     * @description Sorts the array using the bubble sort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options the options for the bubble sort
+     * @param {Boolean} options.time if true, the time it took to sort will be printed
      */
-    bubble = async () => {
-        console.log("SortCat is sorting your array using Bubble Sort!");
+    bubble = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         await bubbleSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+        
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the count sort
+     * @example await SortCat.count();
+     * 
+     * @method
+     * @name count
+     * @description Sorts the array using the count sort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options the options for count sort
+     * @param {Boolean} options.time if true, the time it took to sort will be printed
      */
-    count = async () => {
-        console.log("SortCat is sorting your array using Count Sort!");
+    count = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         await countSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+    
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
-     * Sorts the array using the bucket sort
+     * @example await SortCat.bucket();
+     * 
+     * @method
+     * @name bucket
+     * @description Sorts the array using the bucket sort
      * method of sorting! SortCat approved.
+     * @async
+     * @param {Object} options the options for the bucket sort
+     * @param {Boolean} options.time if true, the time it took to sort will be printed
      */
-    bucket = async () => {
-        console.log("SortCat is sorting your array using Bucket Sort!");
+    bucket = async ({...options}) => {
+        if (options.time) {
+            await this.setTimer(true);
+        }
+
         await bucketSort(this.array);
-        await this.prrrintArray();
-        console.log("SortCat has finished sorting your array!");
+    
+        if (options.time) {
+            await this.setTimer(false);
+            await this.clearTimer();
+        }
     }
 
     /**
@@ -141,6 +244,38 @@ class SortCat {
     pet = async () => {
         this.hasBeenPet = true;
         console.error("SortCat does not like being pet...");
+    }
+
+    /**
+     * @example await setTimer(true);
+     * 
+     * @function
+     * @name setTimer
+     * @description A timer for checking the runtime of the 
+     * sorting algorithms.
+     * @async
+     * @param {Boolean} start whether or not this is the start of the timer 
+     */
+    setTimer = async (start) => {
+        if (start) {
+            this.startTime = new Date().getTime();
+        } else {
+            this.endTime = new Date().getTime() - this.startTime;
+            console.log(`Time to sort: ${this.endTime}ms`);
+        }
+    }
+
+    /**
+     * @example await clearTimer();
+     * 
+     * @function
+     * @name clearTimer
+     * @description Clears the timer
+     * @aysnc
+     */
+    clearTimer = async () => {
+        this.startTime = null;
+        this.endTime = null;
     }
 }
 

@@ -1,9 +1,9 @@
 /**
  * @file Source code for Quick Sort
  * @author Ricky Clark III
- * @version 1.0.1
+ * @version 1.0.2
  */
-import { swap } from "./lib/helpers";
+import { swap } from "./lib/helpers.js";
 
 /**
  * Creates a partition of the array that is
