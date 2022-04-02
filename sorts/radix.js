@@ -29,6 +29,7 @@ const getMax = async (array) => {
 /**
  * Sorts an array by counting the number
  * of occurences. A.K.A the count sort.
+ * 
  * @function
  * @name countSort
  * @async

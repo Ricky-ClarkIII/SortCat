@@ -8,6 +8,7 @@ import mergeSort from "./sorts/merge.js";
 import quickSort from "./sorts/quick.js";
 import stalinSort from "./sorts/stalin.js";
 import insertionSort from "./sorts/insertion.js";
+import bubbleSort from "./sorts/bubble.js";
 
 /**
  * SortCat class that has all your sorting
@@ -95,6 +96,16 @@ class SortCat {
     insertion = async () => {
         console.log("SortCat is sorting your array using Insertion Sort!");
         await insertionSort(this.array);
+        await this.prrrintArray();
+        console.log("SortCat has finished sorting your array!");
+    }
+
+    /**
+     * 
+     */
+    bubble = async () => {
+        console.log("SortCat is sorting your array using Bubble Sort!");
+        await bubbleSort(this.array);
         await this.prrrintArray();
         console.log("SortCat has finished sorting your array!");
     }

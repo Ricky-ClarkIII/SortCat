@@ -39,6 +39,9 @@ const merge = async (arrayOne, arrayTwo) => {
  * of only a single element. The returning sub-arrays will be merged and 
  * sorted until the entire array is completely sorted.
  * 
+ * @function
+ * @name mergeSort
+ * @async
  * @param {Array<Number>} array the array to sort 
  * @returns {Array<Number>} the sorted array
  */

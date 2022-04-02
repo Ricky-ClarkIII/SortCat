@@ -12,9 +12,12 @@
  * index of the array. All bigger elements
  * are shifted to the right of the insert and 
  * all elements less are on the left of the 
- * insert
+ * insert.
  * 
- * @param {Array<Number>} array 
+ * @function
+ * @name insertionSort
+ * @async
+ * @param {Array<Number>} array the unsorted array
  */
 const insertionSort = async (array) => {
     for (let i = 1; i < array.length; i++) {
