@@ -2,6 +2,10 @@
  * @file Source code for Insertion Sort
  * @author Ricky Clark III
  * @version 1.0.2
+ * 
+ * Time Complexities
+ * Best Case: O(n)
+ * Worst Case: O(n^2)
  */
 
 /**

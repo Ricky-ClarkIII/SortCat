@@ -2,6 +2,10 @@
  * @file Source code for Count Sort
  * @author Ricky Clark III
  * @version 1.0.2
+ * 
+ * Time Complexities
+ * Best Case: O(n)
+ * Worst Case: O(n)
  */
 import { getMin, getMax } from "./lib/helpers.js";
 
