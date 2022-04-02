@@ -6,11 +6,12 @@
 import { getMax } from "./lib/helpers.js";
 
 /**
- * Sorts an array by counting the number
- * of occurences. A.K.A the count sort.
+ * @example await countSort(array, baseOfDigit);
  * 
  * @function
  * @name countSort
+ * @description Sorts an array by counting the number
+ * of occurences. A.K.A the count sort.
  * @async
  * @param {Array<Number>} array the array to count sort
  * @param {Number} exp the digit represented as an exponential
@@ -42,11 +43,12 @@ const countSort = async (array, exp) => {
 }
 
 /**
- * Sorts an array with digits
- * in base 10 using Radix Sort.
+ * @example await radixSort(array);
  * 
  * @function
  * @name radixSort
+ * @description Sorts an array with digits
+ * in base 10 using Radix Sort.
  * @async
  * @param {Array<Number>} array the array to sort
  */

@@ -5,7 +5,11 @@
  */
 
 /**
- * Sorts the array using Insertion Sort.
+ * @example await insertionSort(array); 
+ * 
+ * @function
+ * @name insertionSort
+ * @description Sorts the array using Insertion Sort.
  * The array is sorted by iterating
  * through n - 1 elements and inserting
  * the current element into the correct
@@ -13,9 +17,6 @@
  * are shifted to the right of the insert and 
  * all elements less are on the left of the 
  * insert.
- * 
- * @function
- * @name insertionSort
  * @async
  * @param {Array<Number>} array the unsorted array
  */

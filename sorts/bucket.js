@@ -5,14 +5,15 @@
  */
 
 /**
- * Sorts an array using the bucket sort
+ * @example await bucketSort(array);
+ * 
+ * @function
+ * @name bucketSort
+ * @description * Sorts an array using the bucket sort
  * method of sorting. Array length number of
  * buckets are created. Each bucket is then filled
  * with elements of the array. Those buckets are then individually
  * sorted and finally concatenated into a single sorted array.
- * 
- * @function
- * @name bucketSort
  * @async
  * @param {Array<Number>} array the array to sort
  */

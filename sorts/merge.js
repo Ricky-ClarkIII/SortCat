@@ -5,15 +5,16 @@
  */
 
 /**
- * Creates an empty array to push sorted elements into.
+ * @example let mergedArray = await merge(array1, array2);
+ * 
+ * @function
+ * @name merge
+ * @description Creates an empty array to push sorted elements into.
  * The sub-arrays are already sorted, so only check the first elements 
  * and push the correct one into the sorted array. The shift method
  * removes the first element from the array so loop until one of the sub-arrays
  * no longer has elements. Concat the remaining sub-array onto the sorted array
  * and return the array.
- *
- * @function
- * @name merge
  * @async 
  * @param {Number} arrayOne the first sorted sub-array to merge
  * @param {Number} arrayTwo the second sorted sub-array to merge
@@ -34,13 +35,14 @@ const merge = async (arrayOne, arrayTwo) => {
 }
 
 /**
- * Merges two arrays using mergesort. Mergesort
- * splits the arrays in half recursively until the array consists
- * of only a single element. The returning sub-arrays will be merged and 
- * sorted until the entire array is completely sorted.
+ * @example let sortedArray = await mergeSort(array);
  * 
  * @function
  * @name mergeSort
+ * @description Merges two arrays using mergesort. Mergesort
+ * splits the arrays in half recursively until the array consists
+ * of only a single element. The returning sub-arrays will be merged and 
+ * sorted until the entire array is completely sorted.
  * @async
  * @param {Array<Number>} array the array to sort 
  * @returns {Array<Number>} the sorted array

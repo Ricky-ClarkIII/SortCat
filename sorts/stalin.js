@@ -6,12 +6,14 @@
 import { getMin } from './lib/helpers.js';
 
 /**
- * Sorts the array using Stalin Sort. 
+ * @example let stalinArray = await stalinSort(array);
+ * 
+ * @function
+ * @name stalinSort
+ * @description  Sorts the array using Stalin Sort. 
  * The smallest value is found and swapped with the first value in the array.
  * Then all elements not in greater than the min are destroyed.
  * Credit to: https://github.com/gustavo-depaula/stalin-sort/blob/master/javascript/stalin-sort.js
- * 
- * @name stalinSort
  * @async
  * @param {Array<Number>} array 
  * @returns {Array<Number>} the sorted array

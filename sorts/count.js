@@ -6,13 +6,14 @@
 import { getMin, getMax } from "./lib/helpers.js";
 
 /**
- * Counts the number of times each value appears in the array.
- * Then returns the sorted array given the number of counted
- * occurences. The sorted array is copied back to the original
- * array.
+ * @example await countSort(array);
  * 
  * @function
  * @name countSort
+ * @description Counts the number of times each value appears in the array.
+ * Then returns the sorted array given the number of counted
+ * occurences. The sorted array is copied back to the original
+ * array.
  * @async
  * @param {Array<Number>} array the array to sort 
  */

@@ -35,8 +35,6 @@ class SortCat {
     /**
      * @example await SortCat.prrrintArray(); 
      * 
-     * @method
-     * @name printArray
      * @description Prints an array to the console
      * @async
      */
@@ -49,8 +47,6 @@ class SortCat {
     /**
      * @example await SortCat.radix();
      * 
-     * @method
-     * @name radix
      * @description Sorts the array using the
      * radix sort method of sorting!
      * SortCat approved.
@@ -74,8 +70,6 @@ class SortCat {
     /**
      * @example await SortCat.merge();
      * 
-     * @method
-     * @name merge
      * @description Sorts the array using the mergesort
      * method of sorting! SortCat approved.
      * @async
@@ -98,8 +92,6 @@ class SortCat {
     /**
      * @example await SortCat.quick();
      * 
-     * @method
-     * @name quick
      * @description Sorts the array using the quicksort
      * method of sorting! SortCat approved.
      * @async
@@ -122,8 +114,6 @@ class SortCat {
     /**
      * @example await SortCat.stalin();
      * 
-     * @method
-     * @name stalin
      * @description Sorts the array using the stalin sort
      * method of sorting! SortCat approved.
      * @async
@@ -146,8 +136,6 @@ class SortCat {
     /**
      * @example await SortCat.insertion();
      * 
-     * @method
-     * @name insertion
      * @description Sorts the array using the insertion sort
      * method of sorting! SortCat approved.
      * @async
@@ -169,8 +157,7 @@ class SortCat {
 
     /**
      * @example await SortCat.bubble(true);
-     * @method
-     * @name bubble
+     * 
      * @description Sorts the array using the bubble sort
      * method of sorting! SortCat approved.
      * @async
@@ -193,8 +180,6 @@ class SortCat {
     /**
      * @example await SortCat.count();
      * 
-     * @method
-     * @name count
      * @description Sorts the array using the count sort
      * method of sorting! SortCat approved.
      * @async
@@ -217,8 +202,6 @@ class SortCat {
     /**
      * @example await SortCat.bucket();
      * 
-     * @method
-     * @name bucket
      * @description Sorts the array using the bucket sort
      * method of sorting! SortCat approved.
      * @async
@@ -249,8 +232,6 @@ class SortCat {
     /**
      * @example await setTimer(true);
      * 
-     * @function
-     * @name setTimer
      * @description A timer for checking the runtime of the 
      * sorting algorithms.
      * @async
@@ -268,8 +249,6 @@ class SortCat {
     /**
      * @example await clearTimer();
      * 
-     * @function
-     * @name clearTimer
      * @description Clears the timer
      * @aysnc
      */
