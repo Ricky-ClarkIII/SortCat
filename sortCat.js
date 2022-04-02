@@ -9,6 +9,7 @@ import quickSort from "./sorts/quick.js";
 import stalinSort from "./sorts/stalin.js";
 import insertionSort from "./sorts/insertion.js";
 import bubbleSort from "./sorts/bubble.js";
+import countSort from "./sorts/count.js";
 
 /**
  * SortCat class that has all your sorting
@@ -101,11 +102,23 @@ class SortCat {
     }
 
     /**
-     * 
+     * Sorts the array using the bubble sort
+     * method of sorting! SortCat approved.
      */
     bubble = async () => {
         console.log("SortCat is sorting your array using Bubble Sort!");
         await bubbleSort(this.array);
+        await this.prrrintArray();
+        console.log("SortCat has finished sorting your array!");
+    }
+
+    /**
+     * Sorts the array using the count sort
+     * method of sorting! SortCat approved.
+     */
+    count = async () => {
+        console.log("SortCat is sorting your array using Count Sort!");
+        await countSort(this.array);
         await this.prrrintArray();
         console.log("SortCat has finished sorting your array!");
     }
